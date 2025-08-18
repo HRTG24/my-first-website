@@ -42,4 +42,20 @@ if (clockEl) {
   };
   updateClock();
   setInterval(updateClock, 1000);
+  //Create a button to toggle the clock visibility
+  const toggleClockBtn = document.createElement("button");
+  toggleClockBtn.textContent = "Toggle Clock"; // Set button text
+  toggleClockBtn.className = "btn"; // Optional: Add a class for styling
+
+  // Append the button to an existing element in the DOM
+  const container = document.querySelector(".container"); // Adjust selector as needed
+  if (container) {
+    container.appendChild(toggleClockBtn);
+  }
+
+  toggleClockBtn.addEventListener("click", () => {
+    if (clockEl) {
+      clockEl.style.display = clockEl.style.display === "none" ? "block" : "none";
+    }
+  });
 }
