@@ -1,31 +1,45 @@
+// Elements used on both pages
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Theme toggle (remember choice)
+const root = document.documentElement;
+const savedTheme = localStorage.getItem("theme") || "light";
+root.setAttribute("data-theme", savedTheme);
+
+const toggleThemeBtn = document.getElementById("toggle-theme");
+if (toggleThemeBtn) {
+  toggleThemeBtn.addEventListener("click", () => {
+    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  });
+}
+
+// Home page widgets
 const countEl = document.getElementById("count");
 const addBtn = document.getElementById("add");
 const resetBtn = document.getElementById("reset");
-const toggleThemeBtn = document.getElementById("toggle-theme");
-const yearEl = document.getElementById("year");
+if (countEl && addBtn && resetBtn) {
+  let count = 0;
+  countEl.textContent = count.toString();
 
-let count = 0;
-countEl.textContent = count;
-yearEl.textContent = new Date().getFullYear();
+  addBtn.addEventListener("click", () => {
+    count += 1;
+    countEl.textContent = count.toString();
+  });
+  resetBtn.addEventListener("click", () => {
+    count = 0;
+    countEl.textContent = count.toString();
+  });
+}
 
-// Counter behavior
-addBtn.addEventListener("click", () => {
-  count += 1;
-  countEl.textContent = count;
-});
-
-resetBtn.addEventListener("click", () => {
-  count = 0;
-  countEl.textContent = count;
-});
-
-// Theme toggle (remembers choice)
-const root = document.documentElement;
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) root.setAttribute("data-theme", savedTheme);
-
-toggleThemeBtn.addEventListener("click", () => {
-  const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-  root.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
-});
+// Live clock (only on Home where #clock exists)
+const clockEl = document.getElementById("clock");
+if (clockEl) {
+  const updateClock = () => {
+    clockEl.textContent = new Date().toLocaleTimeString();
+  };
+  updateClock();
+  setInterval(updateClock, 1000);
+}
