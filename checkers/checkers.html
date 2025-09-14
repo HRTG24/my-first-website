@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkers • My First Website</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="checkers.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    <script defer src="../script.js"></script>
+    <script defer src="checkers.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <a class="brand" href="../index.html">My First Website</a>
+        <div class="spacer"></div>
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../about.html">About</a>
+        <a class="nav-link" href="../contact.html">Contact</a>
+        <a class="nav-link" href="../location.html">Location</a>
+        <a class="nav-link active" href="checkers.html">Checkers</a>
+        <button id="toggle-theme" class="btn small" aria-label="Toggle theme">Light/Dark</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Play Checkers</h1>
+        <p id="status"></p>
+        <button id="new-game" class="btn">New Game</button>
+      </section>
+
+      <section class="card">
+        <div id="board" class="board"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <small>© <span id="year"></span> Me</small>
+        <a class="repo-link" href="https://github.com/HRTG24/my-first-website" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </footer>
+  </body>
+</html>
