@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - My First Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <a class="brand" href="index.html">My First Website</a>
+        <div class="spacer"></div>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+        <button id="toggle-theme" class="btn small" aria-label="Toggle theme">Light/Dark</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Get in Touch</h1>
+        <p>I'd love to hear from you! Please fill out the form below.</p>
+      </section>
+
+      <section>
+        <form id="contact-form" class="card">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <small>© <span id="year"></span> Me</small>
+        <a class="repo-link" href="https://github.com/HRTG24/my-first-website" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </footer>
+    <script>
+      // Elements used on both pages
+      const yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Theme toggle (remember choice)
+      const root = document.documentElement;
+      const savedTheme = localStorage.getItem("theme") || "light";
+      root.setAttribute("data-theme", savedTheme);
+
+      const toggleThemeBtn = document.getElementById("toggle-theme");
+      if (toggleThemeBtn) {
+        toggleThemeBtn.addEventListener("click", () => {
+          const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", next);
+          localStorage.setItem("theme", next);
+        });
+      }
+
+      // Contact form submission
+      const contactForm = document.getElementById("contact-form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Thank you for your message!");
+          contactForm.reset();
+        });
+      }
+    </script>
+  </body>
+</html>
