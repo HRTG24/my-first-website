@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600" role="img" aria-labelledby="title desc">
+  <title id="title">TUFFIN high protein muffins ad</title>
+  <desc id="desc">Retro style gym themed ad for Tuffin muffins.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="titleFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="1600" fill="url(#bg)"/>
+  <rect x="30" y="30" width="840" height="1540" fill="none" stroke="#38bdf8" stroke-width="8"/>
+
+  <text x="450" y="220" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="180" fill="url(#titleFill)" stroke="#ef4444" stroke-width="12" transform="skewX(-8)">TUFFIN</text>
+  <text x="450" y="320" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="64" fill="#7dd3fc" stroke="#0f172a" stroke-width="4">HIGH PROTEIN MUFFINS</text>
+
+  <rect x="180" y="420" width="540" height="760" rx="40" fill="#0b1220" stroke="#f59e0b" stroke-width="8"/>
+  <circle cx="450" cy="620" r="110" fill="#f59e0b"/>
+  <rect x="350" y="740" width="200" height="320" rx="60" fill="#fb923c"/>
+  <rect x="300" y="790" width="90" height="260" rx="40" fill="#fdba74"/>
+  <rect x="510" y="790" width="90" height="260" rx="40" fill="#fdba74"/>
+  <text x="450" y="1140" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" fill="#e2e8f0">(stylized ad art)</text>
+
+  <text x="80" y="1430" font-family="Impact, Arial Black, sans-serif" font-size="120" fill="#fde047" stroke="#0f172a" stroke-width="8">GET TUFFIN!</text>
+
+  <g transform="translate(620,1300)">
+    <ellipse cx="70" cy="120" rx="70" ry="30" fill="#7c2d12"/>
+    <path d="M20 120 Q70 20 120 120 Z" fill="#d97706"/>
+    <ellipse cx="230" cy="120" rx="70" ry="30" fill="#7c2d12"/>
+    <path d="M180 120 Q230 20 280 120 Z" fill="#b45309"/>
+  </g>
+</svg>

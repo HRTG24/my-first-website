@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My First Website</title>
+    <title>Tuffin Ad • My First Website</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
     <script defer src="script.js"></script>
@@ -13,35 +13,29 @@
       <nav class="container nav">
         <a class="brand" href="index.html">My First Website</a>
         <div class="spacer"></div>
-        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link" href="ad.html">Ad</a>
+        <a class="nav-link active" href="ad.html">Ad</a>
         <button id="toggle-theme" class="btn small" aria-label="Toggle theme">Light/Dark</button>
       </nav>
     </header>
 
-    <main class="container">
-      <section class="hero">
-        <h1>🎉 Hello from my first website!</h1>
-        <p>This is a basic site using HTML, CSS, and JavaScript. Edit files, save, and watch Live Server refresh.</p>
-      </section>
+    <main class="container ad-page">
+      <section class="ad-wrap" aria-label="Advertisement for Tuffin High Protein Muffins">
+        <h1 class="ad-title">NOW PUMPING: TUFFIN</h1>
+        <p class="ad-subtitle">HIGH PROTEIN MUFFINS • GYM FUEL • GET TUFFIN!</p>
 
-      <section class="grid">
-        <article class="card">
-          <h2>Click Counter</h2>
-          <p>Clicks: <span id="count">0</span></p>
-          <div class="row">
-            <button id="add" class="btn">Add one</button>
-            <button id="reset" class="btn outline">Reset</button>
-          </div>
-        </article>
+        <figure class="ad-image-frame">
+          <img
+            class="ad-image"
+            src="assets/tuffin-ad.svg"
+            alt="Tuffin High Protein Muffins retro gym advertisement"
+            loading="lazy"
+          />
+          <figcaption>When your bulk needs baked goods, go full TUFFIN mode.</figcaption>
+        </figure>
 
-        <article class="card">
-          <h2>Live Clock</h2>
-          <p id="clock" class="mono">--:--:--</p>
-        </article>
-        <p>This line was added on a feature branch as a PR test.</p>
-
+        <a class="btn ad-cta" href="#" aria-label="Mock call to action">Grab a 12-pack</a>
       </section>
     </main>
 
